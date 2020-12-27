@@ -27,14 +27,6 @@ public class Watermelon {
         BufferedReader br;
         StringTokenizer st;
 
-        FastScanner(File f) {
-            try {
-                br = new BufferedReader(new FileReader(f));
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            }
-        }
-
         FastScanner(InputStreamReader f) {
             br = new BufferedReader(f);
         }
