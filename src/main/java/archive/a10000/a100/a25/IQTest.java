@@ -1,29 +1,32 @@
-package archive.a1000.a100.a41;
+package archive.a10000.a100.a25;
 
 
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class Translation {
+public class IQTest {
     FastScanner in;
     PrintWriter out;
 
 
     public void solve() {
-        String str = in.next();
-        String revStr = in.next();
-        if (str.length() != revStr.length()) {
-            out.println("NO");
-            return;
-        }
-        int size = str.length();
-        for (int i = 0; i < size; i++) {
-            if (str.charAt(i) != revStr.charAt(size - 1 - i)) {
-                out.println("NO");
-                return;
+        int n = in.nextInt();
+        int odd = 0;
+        int oddNum = 0;
+        int evenNum = 0;
+        for (int i = 0; i < n; i++) {
+            if (in.nextInt() % 2 == 0) {
+                evenNum = i;
+            } else {
+                odd++;
+                oddNum = i;
             }
         }
-        out.println("YES");
+        if (odd == 1) {
+            out.println(oddNum + 1);
+        } else {
+            out.println(evenNum + 1);
+        }
     }
 
     public void run() {
@@ -62,7 +65,7 @@ public class Translation {
     }
 
     public static void main(String[] args) {
-        new Translation().run();
+        new IQTest().run();
     }
 }
 

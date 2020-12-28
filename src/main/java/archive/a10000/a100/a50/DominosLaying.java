@@ -1,39 +1,18 @@
-package archive.a1000.a100.a58;
+package archive.a10000.a100.a50;
+
 
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class Chat {
+public class DominosLaying {
     FastScanner in;
     PrintWriter out;
 
 
     public void solve() {
-        String str = in.next();
-        int w = 0;
-        for (int i = 0; i < str.length(); i++) {
-            if (w == 0 && str.charAt(i) == 'h') {
-                w++;
-                continue;
-            }
-            if (w == 1 && str.charAt(i) == 'e') {
-                w++;
-                continue;
-            }
-            if (w == 2 && str.charAt(i) == 'l') {
-                w++;
-                continue;
-            }
-            if (w == 3 && str.charAt(i) == 'l') {
-                w++;
-                continue;
-            }
-            if (w == 4 && str.charAt(i) == 'o') {
-                System.out.println("YES");
-                return;
-            }
-        }
-        System.out.println("NO");
+        int n = in.nextInt();
+        int m = in.nextInt();
+        out.println(m * n / 2);
     }
 
     public void run() {
@@ -72,6 +51,6 @@ public class Chat {
     }
 
     public static void main(String[] args) {
-        new Chat().run();
+        new DominosLaying().run();
     }
 }

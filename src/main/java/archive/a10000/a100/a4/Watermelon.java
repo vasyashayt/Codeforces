@@ -1,32 +1,17 @@
-package archive.a1000.a100.a25;
+package archive.a10000.a100.a4;
 
 
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class IQTest {
+public class Watermelon {
     FastScanner in;
     PrintWriter out;
 
-
     public void solve() {
-        int n = in.nextInt();
-        int odd = 0;
-        int oddNum = 0;
-        int evenNum = 0;
-        for (int i = 0; i < n; i++) {
-            if (in.nextInt() % 2 == 0) {
-                evenNum = i;
-            } else {
-                odd++;
-                oddNum = i;
-            }
-        }
-        if (odd == 1) {
-            out.println(oddNum + 1);
-        } else {
-            out.println(evenNum + 1);
-        }
+        int w = in.nextInt();
+        if (w < 4 || w % 2 != 0) out.println("NO");
+        else out.println("YES");
     }
 
     public void run() {
@@ -38,10 +23,17 @@ public class IQTest {
         out.close();
     }
 
-
     class FastScanner {
         BufferedReader br;
         StringTokenizer st;
+
+        FastScanner(File f) {
+            try {
+                br = new BufferedReader(new FileReader(f));
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+        }
 
         FastScanner(InputStreamReader f) {
             br = new BufferedReader(f);
@@ -61,11 +53,9 @@ public class IQTest {
         int nextInt() {
             return Integer.parseInt(next());
         }
-
     }
 
-    public static void main(String[] args) {
-        new IQTest().run();
+    public static void main(String[] arg) {
+        new Watermelon().run();
     }
 }
-

@@ -1,27 +1,39 @@
-package archive.a1000.a100.a69;
+package archive.a10000.a100.a58;
 
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class YoungPhysicist {
+public class Chat {
     FastScanner in;
     PrintWriter out;
 
+
     public void solve() {
-        int n = in.nextInt();
-        int a = 0;
-        int b = 0;
-        int c = 0;
-        for (int i = 0; i < n; i++) {
-            a += in.nextInt();
-            b += in.nextInt();
-            c += in.nextInt();
+        String str = in.next();
+        int w = 0;
+        for (int i = 0; i < str.length(); i++) {
+            if (w == 0 && str.charAt(i) == 'h') {
+                w++;
+                continue;
+            }
+            if (w == 1 && str.charAt(i) == 'e') {
+                w++;
+                continue;
+            }
+            if (w == 2 && str.charAt(i) == 'l') {
+                w++;
+                continue;
+            }
+            if (w == 3 && str.charAt(i) == 'l') {
+                w++;
+                continue;
+            }
+            if (w == 4 && str.charAt(i) == 'o') {
+                System.out.println("YES");
+                return;
+            }
         }
-        if (a == 0 && b == 0 && c == 0) {
-            out.println("YES");
-        } else {
-            out.println("NO");
-        }
+        System.out.println("NO");
     }
 
     public void run() {
@@ -60,6 +72,6 @@ public class YoungPhysicist {
     }
 
     public static void main(String[] args) {
-        new YoungPhysicist().run();
+        new Chat().run();
     }
 }

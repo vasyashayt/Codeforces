@@ -1,4 +1,4 @@
-package archive.a1000.a100.a59;
+package archive.a10000.a100.a59;
 
 import java.io.*;
 import java.util.StringTokenizer;

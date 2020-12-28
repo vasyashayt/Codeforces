@@ -1,31 +1,23 @@
-package archive.a1000.a100.a96;
+package archive.a20000.a100.a30;
+
 
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class Football {
+public class LookingSimpleTask {
     FastScanner in;
     PrintWriter out;
 
+
     public void solve() {
-        String str = in.next();
-        int zero = 0;
-        int one = 0;
-        for (int i = 0; i < str.length(); i++) {
-            if (str.charAt(i) == '0') {
-                zero++;
-                one = 0;
-            }
-            if (str.charAt(i) == '1') {
-                one++;
-                zero = 0;
-            }
-            if (zero == 7 || one == 7) {
-                out.println("YES");
+        int n = in.nextInt();
+        for (int i = 0; i < n; i++) {
+            if (in.nextInt() == 1) {
+                out.println("HARD");
                 return;
             }
         }
-        out.println("NO");
+        out.println("EASY");
     }
 
     public void run() {
@@ -64,7 +56,6 @@ public class Football {
     }
 
     public static void main(String[] args) {
-        new Football().run();
+        new LookingSimpleTask().run();
     }
-
 }

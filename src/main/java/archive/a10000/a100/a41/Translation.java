@@ -1,20 +1,29 @@
-package archive.a1000.a100.a1;
+package archive.a10000.a100.a41;
+
 
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class TheaterSquare {
+public class Translation {
     FastScanner in;
     PrintWriter out;
 
+
     public void solve() {
-        int n = in.nextInt();
-        int m = in.nextInt();
-        int a = in.nextInt();
-        int nMod = n % a == 0 ? n / a : n / a + 1;
-        int mMod = m % a == 0 ? m / a : m / a + 1;
-        long res = (long) nMod * mMod;
-        out.println(res);
+        String str = in.next();
+        String revStr = in.next();
+        if (str.length() != revStr.length()) {
+            out.println("NO");
+            return;
+        }
+        int size = str.length();
+        for (int i = 0; i < size; i++) {
+            if (str.charAt(i) != revStr.charAt(size - 1 - i)) {
+                out.println("NO");
+                return;
+            }
+        }
+        out.println("YES");
     }
 
     public void run() {
@@ -26,10 +35,10 @@ public class TheaterSquare {
         out.close();
     }
 
+
     class FastScanner {
         BufferedReader br;
         StringTokenizer st;
-
 
         FastScanner(InputStreamReader f) {
             br = new BufferedReader(f);
@@ -49,9 +58,11 @@ public class TheaterSquare {
         int nextInt() {
             return Integer.parseInt(next());
         }
+
     }
 
     public static void main(String[] args) {
-        new TheaterSquare().run();
+        new Translation().run();
     }
 }
+

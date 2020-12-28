@@ -1,17 +1,24 @@
-package archive.a1000.a100.a4;
+package archive.a10000.a100.a71;
 
 
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class Watermelon {
+public class TooLongWord {
     FastScanner in;
     PrintWriter out;
 
     public void solve() {
-        int w = in.nextInt();
-        if (w < 4 || w % 2 != 0) out.println("NO");
-        else out.println("YES");
+        int n = in.nextInt();
+        for (int i = 0; i < n; i++) {
+            String word = in.next();
+            if (word.length() <= 10) {
+                out.println(word);
+            } else {
+                String wordMod = "" + word.charAt(0) + (word.length() - 2) + word.charAt(word.length() - 1);
+                out.println(wordMod);
+            }
+        }
     }
 
     public void run() {
@@ -56,6 +63,6 @@ public class Watermelon {
     }
 
     public static void main(String[] arg) {
-        new Watermelon().run();
+        new TooLongWord().run();
     }
 }

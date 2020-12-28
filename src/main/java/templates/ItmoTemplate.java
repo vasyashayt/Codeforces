@@ -1,5 +1,6 @@
 package templates;
 
+
 import java.io.*;
 import java.util.StringTokenizer;
 
@@ -13,8 +14,10 @@ public class ItmoTemplate {
 
     public void run() {
         try {
-            in = new FastScanner(new File(".in"));
-            out = new PrintWriter(new File(".out"));
+            in = new FastScanner(new InputStreamReader(System.in));
+            out = new PrintWriter(new OutputStreamWriter(System.out));
+            //in = new FastScanner(new File(".in"));
+            //out = new PrintWriter(new File(".out"));
 
             solve();
 

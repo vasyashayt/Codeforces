@@ -1,18 +1,27 @@
-package archive.a1000.a100.a50;
-
+package archive.a10000.a100.a69;
 
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class DominosLaying {
+public class YoungPhysicist {
     FastScanner in;
     PrintWriter out;
 
-
     public void solve() {
         int n = in.nextInt();
-        int m = in.nextInt();
-        out.println(m * n / 2);
+        int a = 0;
+        int b = 0;
+        int c = 0;
+        for (int i = 0; i < n; i++) {
+            a += in.nextInt();
+            b += in.nextInt();
+            c += in.nextInt();
+        }
+        if (a == 0 && b == 0 && c == 0) {
+            out.println("YES");
+        } else {
+            out.println("NO");
+        }
     }
 
     public void run() {
@@ -51,6 +60,6 @@ public class DominosLaying {
     }
 
     public static void main(String[] args) {
-        new DominosLaying().run();
+        new YoungPhysicist().run();
     }
 }

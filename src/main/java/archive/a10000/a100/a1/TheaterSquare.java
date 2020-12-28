@@ -1,24 +1,20 @@
-package archive.a1000.a100.a71;
-
+package archive.a10000.a100.a1;
 
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class TooLongWord {
+public class TheaterSquare {
     FastScanner in;
     PrintWriter out;
 
     public void solve() {
         int n = in.nextInt();
-        for (int i = 0; i < n; i++) {
-            String word = in.next();
-            if (word.length() <= 10) {
-                out.println(word);
-            } else {
-                String wordMod = "" + word.charAt(0) + (word.length() - 2) + word.charAt(word.length() - 1);
-                out.println(wordMod);
-            }
-        }
+        int m = in.nextInt();
+        int a = in.nextInt();
+        int nMod = n % a == 0 ? n / a : n / a + 1;
+        int mMod = m % a == 0 ? m / a : m / a + 1;
+        long res = (long) nMod * mMod;
+        out.println(res);
     }
 
     public void run() {
@@ -34,13 +30,6 @@ public class TooLongWord {
         BufferedReader br;
         StringTokenizer st;
 
-        FastScanner(File f) {
-            try {
-                br = new BufferedReader(new FileReader(f));
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            }
-        }
 
         FastScanner(InputStreamReader f) {
             br = new BufferedReader(f);
@@ -62,7 +51,7 @@ public class TooLongWord {
         }
     }
 
-    public static void main(String[] arg) {
-        new TooLongWord().run();
+    public static void main(String[] args) {
+        new TheaterSquare().run();
     }
 }
