@@ -9,7 +9,13 @@ public class A1 {
     PrintWriter out;
 
     public void solve() throws IOException {
-
+        int n = in.nextInt();
+        int m = in.nextInt();
+        int a = in.nextInt();
+        int nMod = n % a == 0 ? n / a : n / a + 1;
+        int mMod = m % a == 0 ? m / a : m / a + 1;
+        long res = (long) nMod * mMod;
+        out.println(res);
     }
 
     public void run() {
