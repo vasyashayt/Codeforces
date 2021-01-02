@@ -9,7 +9,9 @@ public class A4 {
     PrintWriter out;
 
     public void solve() throws IOException {
-
+        int w = in.nextInt();
+        if (w < 4 || w % 2 != 0) out.println("NO");
+        else out.println("YES");
     }
 
     public void run() {
