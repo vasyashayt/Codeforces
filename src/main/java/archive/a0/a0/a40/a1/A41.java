@@ -4,12 +4,26 @@ package archive.a0.a0.a40.a1;
 import java.io.*;
 import java.util.StringTokenizer;
 
+// Перевод
 public class A41 {
     FastScanner in;
     PrintWriter out;
 
     public void solve() throws IOException {
-
+        String str = in.next();
+        String revStr = in.next();
+        if (str.length() != revStr.length()) {
+            out.println("NO");
+            return;
+        }
+        int size = str.length();
+        for (int i = 0; i < size; i++) {
+            if (str.charAt(i) != revStr.charAt(size - 1 - i)) {
+                out.println("NO");
+                return;
+            }
+        }
+        out.println("YES");
     }
 
     public void run() {
