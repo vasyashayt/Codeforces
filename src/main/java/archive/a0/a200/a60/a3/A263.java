@@ -4,12 +4,20 @@ package archive.a0.a200.a60.a3;
 import java.io.*;
 import java.util.StringTokenizer;
 
+// Красивая матрица
 public class A263 {
     FastScanner in;
     PrintWriter out;
 
     public void solve() throws IOException {
-
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5; j++) {
+                if (in.nextInt() == 1) {
+                    out.println(Math.abs(i - 2) + Math.abs(j - 2));
+                    return;
+                }
+            }
+        }
     }
 
     public void run() {
