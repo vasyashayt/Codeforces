@@ -4,12 +4,24 @@ package archive.a0.a0.a50.a9;
 import java.io.*;
 import java.util.StringTokenizer;
 
+// Слово
 public class A59 {
     FastScanner in;
     PrintWriter out;
 
     public void solve() throws IOException {
-
+        String word = in.next();
+        int count = 0;
+        for (int i = 0; i < word.length(); i++) {
+            if (word.charAt(i) >= 'A' && word.charAt(i) <= 'Z') {
+                count++;
+            }
+        }
+        if (count > word.length() / 2 ) {
+            out.println(word.toUpperCase());
+        } else {
+            out.println(word.toLowerCase());
+        }
     }
 
     public void run() {
