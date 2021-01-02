@@ -4,6 +4,7 @@ package archive.a0.a200.a80.a2;
 import java.io.*;
 import java.util.StringTokenizer;
 
+// Bit++
 public class A282 {
     FastScanner in;
     PrintWriter out;
