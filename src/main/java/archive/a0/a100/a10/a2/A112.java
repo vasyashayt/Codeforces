@@ -4,12 +4,24 @@ package archive.a0.a100.a10.a2;
 import java.io.*;
 import java.util.StringTokenizer;
 
+// Петя и строки
 public class A112 {
     FastScanner in;
     PrintWriter out;
 
     public void solve() throws IOException {
-
+        String str1 = in.next().toLowerCase();
+        String str2 = in.next().toLowerCase();
+        for (int i = 0; i < str1.length(); i++) {
+            if(str1.charAt(i) > str2.charAt(i)) {
+                out.println(1);
+                return;
+            } else if(str1.charAt(i) < str2.charAt(i)) {
+                out.println(-1);
+                return;
+            }
+        }
+        out.println(0);
     }
 
     public void run() {
