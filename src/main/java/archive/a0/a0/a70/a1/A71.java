@@ -4,6 +4,7 @@ package archive.a0.a0.a70.a1;
 import java.io.*;
 import java.util.StringTokenizer;
 
+// Слишком длинные слова
 public class A71 {
     FastScanner in;
     PrintWriter out;
