@@ -9,7 +9,16 @@ public class A71 {
     PrintWriter out;
 
     public void solve() throws IOException {
-
+        int n = in.nextInt();
+        for (int i = 0; i < n; i++) {
+            String word = in.next();
+            if (word.length() <= 10) {
+                out.println(word);
+            } else {
+                String wordMod = "" + word.charAt(0) + (word.length() - 2) + word.charAt(word.length() - 1);
+                out.println(wordMod);
+            }
+        }
     }
 
     public void run() {
