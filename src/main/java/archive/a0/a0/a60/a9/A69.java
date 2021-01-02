@@ -4,12 +4,26 @@ package archive.a0.a0.a60.a9;
 import java.io.*;
 import java.util.StringTokenizer;
 
+// Юный физик
 public class A69 {
     FastScanner in;
     PrintWriter out;
 
     public void solve() throws IOException {
-
+        int n = in.nextInt();
+        int a = 0;
+        int b = 0;
+        int c = 0;
+        for (int i = 0; i < n; i++) {
+            a += in.nextInt();
+            b += in.nextInt();
+            c += in.nextInt();
+        }
+        if (a == 0 && b == 0 && c == 0) {
+            out.println("YES");
+        } else {
+            out.println("NO");
+        }
     }
 
     public void run() {
