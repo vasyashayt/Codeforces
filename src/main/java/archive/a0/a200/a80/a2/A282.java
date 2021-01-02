@@ -9,7 +9,16 @@ public class A282 {
     PrintWriter out;
 
     public void solve() throws IOException {
-
+        int n = in.nextInt();
+        int res = 0;
+        for (int i = 0; i < n; i++) {
+            if (in.next().contains("+")) {
+                res++;
+            } else {
+                res--;
+            }
+        }
+        out.println(res);
     }
 
     public void run() {
