@@ -4,12 +4,15 @@ package archive.a0.a0.a50.a0;
 import java.io.*;
 import java.util.StringTokenizer;
 
+// Укладка доминошками
 public class A50 {
     FastScanner in;
     PrintWriter out;
 
     public void solve() throws IOException {
-
+        int n = in.nextInt();
+        int m = in.nextInt();
+        out.println(m * n / 2);
     }
 
     public void run() {
