@@ -2,14 +2,27 @@ package archive.a0.a100.a10.a8;
 
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.StringTokenizer;
 
+// Упражнение на строки
 public class A118 {
     FastScanner in;
     PrintWriter out;
 
-    public void solve() throws IOException {
 
+    public void solve() throws IOException {
+        List<Character> vowels = new ArrayList<>(Arrays.asList('a', 'o', 'y', 'e', 'u', 'i'));
+        String str = in.next().toLowerCase();
+        String res = "";
+        for (int i = 0; i < str.length(); i++) {
+            if (!vowels.contains(str.charAt(i))) {
+                res = res + "." + str.charAt(i);
+            }
+        }
+        out.println(res);
     }
 
     public void run() {
