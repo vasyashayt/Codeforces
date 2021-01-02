@@ -4,12 +4,20 @@ package archive.a1000.a0.a30.a0;
 import java.io.*;
 import java.util.StringTokenizer;
 
+// В поисках простой задачи
 public class A1030 {
     FastScanner in;
     PrintWriter out;
 
     public void solve() throws IOException {
-
+        int n = in.nextInt();
+        for (int i = 0; i < n; i++) {
+            if (in.nextInt() == 1) {
+                out.println("HARD");
+                return;
+            }
+        }
+        out.println("EASY");
     }
 
     public void run() {
