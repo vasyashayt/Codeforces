@@ -4,12 +4,25 @@ package archive.a0.a100.a50.a8;
 import java.io.*;
 import java.util.StringTokenizer;
 
+// Следующий раунд
 public class A158 {
     FastScanner in;
     PrintWriter out;
 
     public void solve() throws IOException {
-
+        int n = in.nextInt();
+        int k = in.nextInt() - 1;
+        int res = 0;
+        int[] points = new int[n];
+        for (int i = 0; i < n; i++) {
+            points[i] = in.nextInt();
+        }
+        for (int i = 0; i < n; i++) {
+            if (points[i] > 0 && points[i] >= points[k]) {
+                res++;
+            }
+        }
+        out.println(res);
     }
 
     public void run() {
