@@ -4,12 +4,22 @@ package archive.a0.a200.a30.a1;
 import java.io.*;
 import java.util.StringTokenizer;
 
+// Команда
 public class A231 {
     FastScanner in;
     PrintWriter out;
 
     public void solve() throws IOException {
-
+        int n = in.nextInt();
+        int res = 0;
+        for (int i = 0; i < n; i++) {
+            int taskSol = 0;
+            for (int j = 0; j < 3; j++) {
+                if (in.nextInt() == 1) taskSol++;
+            }
+            if (taskSol > 1) res++;
+        }
+        out.println(res);
     }
 
     public void run() {
