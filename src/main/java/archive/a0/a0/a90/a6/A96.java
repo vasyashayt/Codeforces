@@ -4,12 +4,30 @@ package archive.a0.a0.a90.a6;
 import java.io.*;
 import java.util.StringTokenizer;
 
+// Футбол
 public class A96 {
     FastScanner in;
     PrintWriter out;
 
     public void solve() throws IOException {
-
+        String str = in.next();
+        int zero = 0;
+        int one = 0;
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == '0') {
+                zero++;
+                one = 0;
+            }
+            if (str.charAt(i) == '1') {
+                one++;
+                zero = 0;
+            }
+            if (zero == 7 || one == 7) {
+                out.println("YES");
+                return;
+            }
+        }
+        out.println("NO");
     }
 
     public void run() {
