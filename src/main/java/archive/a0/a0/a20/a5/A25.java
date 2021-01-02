@@ -4,12 +4,29 @@ package archive.a0.a0.a20.a5;
 import java.io.*;
 import java.util.StringTokenizer;
 
+// IQ тест
 public class A25 {
     FastScanner in;
     PrintWriter out;
 
     public void solve() throws IOException {
-
+        int n = in.nextInt();
+        int odd = 0;
+        int oddNum = 0;
+        int evenNum = 0;
+        for (int i = 0; i < n; i++) {
+            if (in.nextInt() % 2 == 0) {
+                evenNum = i;
+            } else {
+                odd++;
+                oddNum = i;
+            }
+        }
+        if (odd == 1) {
+            out.println(oddNum + 1);
+        } else {
+            out.println(evenNum + 1);
+        }
     }
 
     public void run() {
