@@ -4,6 +4,7 @@ package archive.a0.a0.a0.a4;
 import java.io.*;
 import java.util.StringTokenizer;
 
+// Арбуз
 public class A4 {
     FastScanner in;
     PrintWriter out;
