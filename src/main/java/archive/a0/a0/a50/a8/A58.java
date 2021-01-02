@@ -4,12 +4,37 @@ package archive.a0.a0.a50.a8;
 import java.io.*;
 import java.util.StringTokenizer;
 
+// Чат
 public class A58 {
     FastScanner in;
     PrintWriter out;
 
     public void solve() throws IOException {
-
+        String str = in.next();
+        int w = 0;
+        for (int i = 0; i < str.length(); i++) {
+            if (w == 0 && str.charAt(i) == 'h') {
+                w++;
+                continue;
+            }
+            if (w == 1 && str.charAt(i) == 'e') {
+                w++;
+                continue;
+            }
+            if (w == 2 && str.charAt(i) == 'l') {
+                w++;
+                continue;
+            }
+            if (w == 3 && str.charAt(i) == 'l') {
+                w++;
+                continue;
+            }
+            if (w == 4 && str.charAt(i) == 'o') {
+                System.out.println("YES");
+                return;
+            }
+        }
+        System.out.println("NO");
     }
 
     public void run() {
