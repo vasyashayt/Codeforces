@@ -4,11 +4,19 @@ package archive.a0.a200.a80.a1;
 import java.io.*;
 import java.util.StringTokenizer;
 
+//Капитализация слова
 public class A281 {
     FastScanner in;
     PrintWriter out;
 
     public void solve() throws IOException {
+        String str = in.next();
+        if (str.length() > 1) {
+            str = Character.toUpperCase(str.charAt(0)) + str.substring(1);
+        } else {
+            str = str.toUpperCase();
+        }
+        out.println(str);
 
     }
 
