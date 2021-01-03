@@ -49,3 +49,4 @@ hs_err_pid*
 /build/tmp/compileJava/source-classes-mapping.txt
 /.idea/checkstyle-idea.xml
 /.idea/modules/Codeforces.main.iml
+/.PVS-Studio/settings.json
