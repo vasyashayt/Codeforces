@@ -4,12 +4,21 @@ package archive.a0.a200.a60.a6;
 import java.io.*;
 import java.util.StringTokenizer;
 
+// Камни на столе
 public class A266 {
     FastScanner in;
     PrintWriter out;
 
     public void solve() throws IOException {
-
+        int n = in.nextInt();
+        String str = in.next();
+        int res = 0;
+        for (int i = 1; i < n; i++) {
+            if (str.charAt(i) == str.charAt(i - 1)) {
+                res++;
+            }
+        }
+        out.println(res);
     }
 
     public void run() {
