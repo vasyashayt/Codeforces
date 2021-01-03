@@ -4,12 +4,24 @@ package archive.a0.a100.a10.a6;
 import java.io.*;
 import java.util.StringTokenizer;
 
+// Трамвай
 public class A116 {
     FastScanner in;
     PrintWriter out;
 
     public void solve() throws IOException {
-
+        int min = 0;
+        int pass = 0;
+        int n = in.nextInt();
+        for (int i = 0; i < n; i++) {
+            int a = in.nextInt();
+            int b = in.nextInt();
+            pass = pass - a + b;
+            if (pass > min) {
+                min = pass;
+            }
+        }
+        out.println(min);
     }
 
     public void run() {
