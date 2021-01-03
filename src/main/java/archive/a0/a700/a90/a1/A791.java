@@ -4,12 +4,21 @@ package archive.a0.a700.a90.a1;
 import java.io.*;
 import java.util.StringTokenizer;
 
+// Мишка и старший брат
 public class A791 {
     FastScanner in;
     PrintWriter out;
 
     public void solve() throws IOException {
-
+        int a = in.nextInt();
+        int b = in.nextInt();
+        int year = 0;
+        while (a <= b) {
+            year++;
+            a *= 3;
+            b *= 2;
+        }
+        out.println(year);
     }
 
     public void run() {
