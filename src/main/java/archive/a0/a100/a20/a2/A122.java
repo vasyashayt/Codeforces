@@ -2,15 +2,42 @@ package archive.a0.a100.a20.a2;
 
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.StringTokenizer;
 
+// Счастливое деление
 public class A122 {
     FastScanner in;
     PrintWriter out;
 
     public void solve() throws IOException {
-
+        int n = in.nextInt();
+        List<Integer> nums = new ArrayList<>();
+        for (int i = 1; i <= n; i++) {
+            int k = i;
+            boolean happy = true;
+            while (k > 0) {
+                if (!(k % 10 == 4 || k % 10 == 7)) {
+                    happy = false;
+                    break;
+                }
+                k /= 10;
+            }
+            if (happy) {
+                nums.add(i);
+            }
+        }
+        for (int i = 0; i < nums.size(); i++) {
+            if (n % nums.get(i) == 0) {
+                out.println("YES");
+                return;
+            }
+        }
+        out.println("NO");
     }
+
 
     public void run() {
         try {
