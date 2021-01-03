@@ -4,12 +4,27 @@ package archive.a0.a200.a30.a6;
 import java.io.*;
 import java.util.StringTokenizer;
 
+// Девушка или Юноша
 public class A236 {
     FastScanner in;
     PrintWriter out;
 
     public void solve() throws IOException {
-
+        int[] nums = new int[26];
+        String str = in.next();
+        for (int i = 0; i < str.length(); i++) {
+            int k = str.charAt(i) - 'a';
+            nums[k] = 1;
+        }
+        int sum = 0;
+        for (int i = 0; i < nums.length; i++) {
+            sum += nums[i];
+        }
+        if (sum % 2 == 0) {
+            out.println("CHAT WITH HER!");
+        } else {
+            out.println("IGNORE HIM!");
+        }
     }
 
     public void run() {
