@@ -4,12 +4,22 @@ package archive.a0.a900.a70.a7;
 import java.io.*;
 import java.util.StringTokenizer;
 
+// Неправильное вычитание
 public class A977 {
     FastScanner in;
     PrintWriter out;
 
     public void solve() throws IOException {
-
+        int n = in.nextInt();
+        int k = in.nextInt();
+        for (int i = 0; i < k; i++) {
+            if (n % 10 == 0) {
+                n /= 10;
+            } else {
+                n -= 1;
+            }
+        }
+        out.println(n);
     }
 
     public void run() {
