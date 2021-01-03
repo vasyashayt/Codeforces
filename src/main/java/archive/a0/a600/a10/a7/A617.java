@@ -4,12 +4,22 @@ package archive.a0.a600.a10.a7;
 import java.io.*;
 import java.util.StringTokenizer;
 
+// Слоник
 public class A617 {
     FastScanner in;
     PrintWriter out;
 
     public void solve() throws IOException {
-
+        int n = in.nextInt();
+        int step = 0;
+        while (n > 5) {
+            n -= 5;
+            step++;
+        }
+        if (n != 0) {
+            step++;
+        }
+        out.println(step);
     }
 
     public void run() {
