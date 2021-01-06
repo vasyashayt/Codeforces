@@ -5,6 +5,7 @@ import java.io.*;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
+// Восстановление трех чисел
 public class A1154 {
     FastScanner in;
     PrintWriter out;
