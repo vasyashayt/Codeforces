@@ -2,6 +2,7 @@ package archive.a1000.a100.a50.a4;
 
 
 import java.io.*;
+import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class A1154 {
@@ -9,7 +10,14 @@ public class A1154 {
     PrintWriter out;
 
     public void solve() throws IOException {
-
+        int [] nums = new int[4];
+        for (int i = 0; i < 4; i++) {
+            nums[i] = in.nextInt();
+        }
+        Arrays.sort(nums);
+        out.println(nums[3] - nums[0]);
+        out.println(nums[3] - nums[1]);
+        out.println(nums[3] - nums[2]);
     }
 
     public void run() {
