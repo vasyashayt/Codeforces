@@ -2,15 +2,36 @@ package archive.a0.a100.a60.a0;
 
 
 import java.io.*;
+import java.util.Arrays;
 import java.util.StringTokenizer;
 
+// Близнецы
 public class A160 {
     FastScanner in;
     PrintWriter out;
 
     public void solve() throws IOException {
-
+        int n = in.nextInt();
+        int[] coins = new int[n];
+        int sum = 0;
+        for (int i = 0; i < n; i++) {
+            int coin = in.nextInt();
+            coins[i] = coin;
+            sum += coin;
+        }
+        Arrays.sort(coins);
+        int countBrother = 0;
+        int sumBrother = 0;
+        for (int i = n - 1; i >= 0; i--) {
+            countBrother++;
+            sumBrother += coins[i];
+            if (sumBrother * 2 > sum) {
+                break;
+            }
+        }
+        out.println(countBrother);
     }
+
 
     public void run() {
         try {
