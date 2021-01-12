@@ -2,14 +2,26 @@ package archive.a0.a100.a30.a3;
 
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.StringTokenizer;
 
+// HQ9+
 public class A133 {
     FastScanner in;
     PrintWriter out;
 
     public void solve() throws IOException {
-
+        String str = in.next();
+        List<Character> chars = new ArrayList<>(Arrays.asList('H', 'Q', '9'));
+        for (int i = 0; i < str.length(); i++) {
+            if (chars.contains(str.charAt(i))) {
+                out.println("YES");
+                return;
+            }
+        }
+        out.println("NO");
     }
 
     public void run() {
