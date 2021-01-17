@@ -2,14 +2,34 @@ package archive.a0.a200.a70.a1;
 
 
 import java.io.*;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.StringTokenizer;
 
+// Красивый год
 public class A271 {
     FastScanner in;
     PrintWriter out;
 
     public void solve() throws IOException {
-
+        int year = in.nextInt();
+        int modYear = year + 1;
+        int nextYear = year + 1;
+        Set<Integer> chars = new HashSet<>();
+        while (true) {
+            for (int i = 0; i < 4; i++) {
+                chars.add(nextYear % 10);
+                nextYear /= 10;
+            }
+            if (chars.size() == 4) {
+                out.println(modYear);
+                break;
+            } else {
+                modYear++;
+                nextYear = modYear;
+                chars.clear();
+            }
+        }
     }
 
     public void run() {
