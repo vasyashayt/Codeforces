@@ -4,12 +4,24 @@ package archive.a0.a600.a70.a7;
 import java.io.*;
 import java.util.StringTokenizer;
 
+//  Ваня и забор
 public class A677 {
     FastScanner in;
     PrintWriter out;
 
     public void solve() throws IOException {
+        int n = in.nextInt();
+        int h = in.nextInt();
+        int width = 0;
 
+        for (int i = 0; i < n; i++) {
+            if (in.nextInt() > h) {
+                width += 2;
+            } else {
+                width++;
+            }
+        }
+        out.println(width);
     }
 
     public void run() {
