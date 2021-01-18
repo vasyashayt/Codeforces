@@ -27,7 +27,8 @@ public class A677 {
     public void run() {
         try {
             in = new FastScanner(new InputStreamReader(System.in));
-            out = new PrintWriter(new OutputStreamWriter(System.out));
+            out = new PrintWriter(new BufferedOutputStream(System.out));
+            //out = new PrintWriter(new OutputStreamWriter(System.out));
             //in = new FastScanner(new File(".in"));
             //out = new PrintWriter(new File(".out"));
 
