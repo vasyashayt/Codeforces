@@ -9,7 +9,16 @@ public class A467 {
     PrintWriter out;
 
     public void solve() throws IOException {
-
+        int n = in.nextInt();
+        int count = 0;
+        for (int i = 0; i < n; i++) {
+            int a = in.nextInt();
+            int b = in.nextInt();
+            if (b - a >= 2) {
+                count++;
+            }
+        }
+        out.println(count);
     }
 
     public void run() {
