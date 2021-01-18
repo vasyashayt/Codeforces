@@ -15,7 +15,8 @@ public class ItmoTemplate {
     public void run() {
         try {
             in = new FastScanner(new InputStreamReader(System.in));
-            out = new PrintWriter(new OutputStreamWriter(System.out));
+            //out = new PrintWriter(new OutputStreamWriter(System.out));
+            out = new PrintWriter(new BufferedOutputStream(System.out));
             //in = new FastScanner(new File(".in"));
             //out = new PrintWriter(new File(".out"));
 
@@ -57,6 +58,24 @@ public class ItmoTemplate {
         int nextInt() {
             return Integer.parseInt(next());
         }
+
+        long nextLong() {
+            return Long.parseLong(next());
+        }
+        double nextDouble() {
+            return Double.parseDouble(next());
+        }
+
+        String nextLine() {
+            String str = "";
+            try {
+                str = br.readLine();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return str;
+        }
+
     }
 
     public static void main(String[] arg) {
