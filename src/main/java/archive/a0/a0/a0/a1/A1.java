@@ -4,7 +4,7 @@ package archive.a0.a0.a0.a1;
 import java.io.*;
 import java.util.StringTokenizer;
 
-// Театральная площадь
+//+ Театральная площадь
 public class A1 {
     FastScanner in;
     PrintWriter out;
