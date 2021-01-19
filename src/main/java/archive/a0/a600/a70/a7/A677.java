@@ -4,7 +4,7 @@ package archive.a0.a600.a70.a7;
 import java.io.*;
 import java.util.StringTokenizer;
 
-//  Ваня и забор
+//+ Ваня и забор
 public class A677 {
     FastScanner in;
     PrintWriter out;
