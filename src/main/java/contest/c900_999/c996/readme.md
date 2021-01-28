@@ -1,0 +1,1 @@
+Codeforces Round #492 (Div. 2) [спасибо, uDebug!]
