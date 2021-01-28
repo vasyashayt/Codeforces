@@ -12,19 +12,20 @@ public class A {
         while(t-- > 0) {
             int n = in.nextInt();
             int d = in.nextInt();
-            int min1 = Integer.MAX_VALUE;
-            int min2 = Integer.MAX_VALUE;
+            int min1 = Integer.MAX_VALUE / 3;
+            int min2 = Integer.MAX_VALUE / 3;
             int big = 0;
             for (int i = 0; i < n; i++) {
                 int a = in.nextInt();
                 if (a > d) big++;
                 if (a < min1) {
+                    min2 = min1;
                     min1 = a;
                 } else if (a <= min2) {
                     min2 = a;
                 }
             }
-            if (big == 0 || min1 + min2 <= d) out.println("YES");
+            if (big == 0 || (min1 + min2) <= d) out.println("YES");
             else out.println("NO");
         }
     }

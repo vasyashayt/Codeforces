@@ -1,56 +1,39 @@
-package contest.c1_99.c1.codeforces_beta_round_1;
+package contest.c1400_1499.c1474.codeforces_round_696_div2;
 
 
 import java.io.*;
 import java.util.StringTokenizer;
 
-// Древнеберляндский цирк
-public class C {
+public class A {
     FastScanner in;
     PrintWriter out;
 
     public void solve() {
-        //todo
-        final double aX = in.nextDouble();
-        final double aY = in.nextDouble();
-        final double bX = in.nextDouble();
-        final double bY = in.nextDouble();
-        final double cX = in.nextDouble();
-        final double cY = in.nextDouble();
+        int t = in.nextInt();
+        while (t-- > 0) {
+            int n = in.nextInt();
+            String str = in.next();
+            int[] a = new int[n];
+            int[] b = new int[n];
+            for (int i = 0; i < n; i++) {
+                int num = str.charAt(i) - '0';
+                a[i] = num;
+                if (i == 0) {
+                    b[i] = 1;
+                } else {
+                    int prev = a[i - 1] + b[i - 1];
+                    if (num + 1 != prev) {
+                        b[i] = 1;
+                    } else {
+                        b[i] = 0;
+                    }
+                }
+                out.print(b[i]);
 
-        double a = Math.sqrt((bX - aX) * (bX - aX) + (bY - aY) * (bY - aY));
-        double b = Math.sqrt((bX - cX) * (bX - cX) + (bY - cY) * (bY - cY));
-        double c = Math.sqrt((cX - aX) * (cX - aX) + (cY - aY) * (cY - aY));
-
-        double p = (a + b + c) / 2;
-        double s = Math.sqrt(p * (p - a) * (p - b) * (p - c));
-
-        double r = (a * b * c) / (4 * s);
-
-        double alpha = Math.acos((a * a + b * b - c * c) / (2 * a * b));
-
-        double beta = Math.acos((a * a + c * c - b * b) / (2 * a * c));
-
-        double gamma = Math.PI - alpha - beta;
-
-        long n = Math.round(Math.PI / gcd(beta, gcd(alpha, gamma)));
-
-        out.println(r * r * Math.sin(2 * Math.PI / n) * n / 2);
-    }
-
-    private static double gcd(double a, double b) {
-
-        if (a < b) return gcd(a, b);
-
-        if (Math.abs(b) < 0.001) {
-
-            return a;
-
-        } else {
-
-            return (gcd(b, a - Math.floor(a / b) * b));
-
+            }
+            out.println();
         }
+
 
     }
 
@@ -108,6 +91,6 @@ public class C {
     }
 
     public static void main(String[] arg) {
-        new C().run();
+        new A().run();
     }
 }

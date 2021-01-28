@@ -1,57 +1,39 @@
-package contest.c1_99.c1.codeforces_beta_round_1;
+package contest.c1400_1499.c1475.codeforces_round_697_div3;
 
 
 import java.io.*;
 import java.util.StringTokenizer;
 
-// Древнеберляндский цирк
-public class C {
+public class B {
     FastScanner in;
     PrintWriter out;
 
     public void solve() {
-        //todo
-        final double aX = in.nextDouble();
-        final double aY = in.nextDouble();
-        final double bX = in.nextDouble();
-        final double bY = in.nextDouble();
-        final double cX = in.nextDouble();
-        final double cY = in.nextDouble();
+        int t = in.nextInt();
+        int p = 2020;
 
-        double a = Math.sqrt((bX - aX) * (bX - aX) + (bY - aY) * (bY - aY));
-        double b = Math.sqrt((bX - cX) * (bX - cX) + (bY - cY) * (bY - cY));
-        double c = Math.sqrt((cX - aX) * (cX - aX) + (cY - aY) * (cY - aY));
+        while (t-- > 0) {
+            int n = in.nextInt();
+            boolean flag = false;
 
-        double p = (a + b + c) / 2;
-        double s = Math.sqrt(p * (p - a) * (p - b) * (p - c));
+            if (n >= p) {
+                int sum = 0;
+                int count = 0;
+                while ((sum + p) <= n) {
+                    sum += p;
+                    count++;
+                }
+                if (sum == n || (sum + count >= n)) {
+                    flag = true;
+                }
+            }
 
-        double r = (a * b * c) / (4 * s);
-
-        double alpha = Math.acos((a * a + b * b - c * c) / (2 * a * b));
-
-        double beta = Math.acos((a * a + c * c - b * b) / (2 * a * c));
-
-        double gamma = Math.PI - alpha - beta;
-
-        long n = Math.round(Math.PI / gcd(beta, gcd(alpha, gamma)));
-
-        out.println(r * r * Math.sin(2 * Math.PI / n) * n / 2);
-    }
-
-    private static double gcd(double a, double b) {
-
-        if (a < b) return gcd(a, b);
-
-        if (Math.abs(b) < 0.001) {
-
-            return a;
-
-        } else {
-
-            return (gcd(b, a - Math.floor(a / b) * b));
-
+            if (flag) {
+                out.println("YES");
+            } else {
+                out.println("NO");
+            }
         }
-
     }
 
     public void run() {
@@ -108,6 +90,6 @@ public class C {
     }
 
     public static void main(String[] arg) {
-        new C().run();
+        new B().run();
     }
 }
