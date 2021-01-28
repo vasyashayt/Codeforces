@@ -50,3 +50,9 @@ hs_err_pid*
 /.idea/checkstyle-idea.xml
 /.idea/modules/Codeforces.main.iml
 /.PVS-Studio/settings.json
+/.idea/sonarlint/
+/.idea/aws.xml
+/.idea/codeStyles/codeStyleConfig.xml
+/.idea/workspace.xml
+/.idea/uiDesigner.xml
+/.idea/codeStyles/Project.xml
