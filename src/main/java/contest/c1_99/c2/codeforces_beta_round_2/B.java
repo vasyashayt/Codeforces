@@ -10,7 +10,7 @@ public class B {
     PrintWriter out;
 
     public void solve() {
-
+        //todo
     }
 
     public void run() {
