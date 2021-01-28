@@ -4,6 +4,7 @@ package contest.c1_99.c1.codeforces_beta_round_1;
 import java.io.*;
 import java.util.StringTokenizer;
 
+// Древнеберляндский цирк
 public class C {
     FastScanner in;
     PrintWriter out;
