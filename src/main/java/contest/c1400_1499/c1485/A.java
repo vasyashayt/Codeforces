@@ -11,6 +11,22 @@ public class A {
 
     public void solve() {
         int t = in.nextInt();
+        while(t-- > 0) {
+            int a = in.nextInt();
+            int b = in.nextInt();
+            int move = 0;
+            if (b == 1) {
+                b++;
+                move++;
+            }
+            if (a / b > 64)
+            while(a > 0) {
+                a = a / b;
+                System.out.println(a);
+                move++;
+            }
+            out.println(move);
+        }
     }
 
     public void run() {
